@@ -22,3 +22,6 @@ buildFeatures {
 Right click on parent view 
 -> press "Show Context Actions" 
 -> press "Convert to data binding"
+
+
+![alt text](https://github.com/codebyjames/Recycler-View-Data-Binding-Example/blob/main/Screenshot_20220216-002428_RecyclerViewDataBindingExample.jpg)
