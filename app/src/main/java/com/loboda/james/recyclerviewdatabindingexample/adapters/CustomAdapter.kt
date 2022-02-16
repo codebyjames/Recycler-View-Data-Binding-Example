@@ -29,10 +29,6 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.CustomViewHolder>() {
 
     class CustomViewHolder(private val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        init {
-            binding.itemSelected = false
-        }
-
         // Bind layout variable "person" to current person based on position
         fun bind(person: Person) {
             binding.person = person
@@ -43,11 +39,11 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.CustomViewHolder>() {
         fun onClickItem() {
 
             // set binding for layout variable "itemSelected"
-            // use the inverse value to set itemSelected
+            // use the inverse value to set itemSelected : if null, then set to true
             binding.apply {
                 itemRoot.setOnClickListener {
-                    itemSelected = itemSelected != true
-                    binding.executePendingBindings()
+                    itemSelected = itemSelected?.let { !it } ?: true
+                    executePendingBindings()
                 }
             }
         }
