@@ -27,11 +27,14 @@ object Data {
         "Sophie", "Missy", "Dan")
 
     /**
-     * Create a list of people using a random number for name & age
+     * Create a list of 10 people
      */
     val people = List(10) {
         createPerson()
     }
 
+    /**
+     * Create a single Person, use random name and age
+     */
     private fun createPerson() : Person = Person(names.random(), (18..65).random())
 }
