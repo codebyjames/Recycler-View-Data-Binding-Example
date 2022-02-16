@@ -20,9 +20,21 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 
 /**
- * use values in Layout XML of list_item.xml
+ * Use bindings in Layout XML of list_item.xml
  */
 
+
+/**
+ * Example use
+ *
+ *      <variable
+ *      name="person"
+ *      type="com.loboda.james.recyclerviewdatabindingexample.model.Person" />
+ *
+ *     <TextView
+ *     ...
+ *     personName="@{person.name}"
+ */
 @BindingAdapter("personName")
 fun bindTextViewName(textView: TextView, name: String) {
 

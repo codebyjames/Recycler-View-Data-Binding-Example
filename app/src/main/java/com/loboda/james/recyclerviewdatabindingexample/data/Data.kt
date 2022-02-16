@@ -33,6 +33,5 @@ object Data {
         createPerson()
     }
 
-    private fun createPerson() : Person = Person(names.random(), getRandomNum())
-    private fun getRandomNum() : Int = (18..65).random()
+    private fun createPerson() : Person = Person(names.random(), (18..65).random())
 }
