@@ -16,6 +16,7 @@ package com.loboda.james.recyclerviewdatabindingexample.adapters
  */
 
 import android.R
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -39,7 +40,11 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.CustomViewHolder>() {
 
             // set binding for layout variable "itemSelected"
             binding.itemRoot.setOnClickListener {
-                binding.itemSelected = true
+                if (binding.itemSelected != null) {
+                    binding.itemSelected = !binding.itemSelected!!
+                } else {
+                    binding.itemSelected = true
+                }
                 binding.executePendingBindings()
             }
         }

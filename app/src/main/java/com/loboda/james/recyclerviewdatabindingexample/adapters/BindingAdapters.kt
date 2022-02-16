@@ -48,9 +48,7 @@ fun bindTextViewName(textView: TextView, name: String) {
 @BindingAdapter("isItemSelected")
 fun bindRootItemSelected(layout: LinearLayout, isSelected: Boolean) {
 
-    if (isSelected) {
-        layout.setBackgroundColor(Color.YELLOW)
-    }
+   layout.setBackgroundColor(if (isSelected) { Color.YELLOW } else { Color.TRANSPARENT })
 
 }
 
